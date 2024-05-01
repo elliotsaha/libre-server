@@ -1,0 +1,24 @@
+{
+  "name": "libre-auth",
+  "version": "1.0.0",
+  "description": "an authentication strategy for fastify",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts"
+  },
+  "author": "Elliot Saha",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.8.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "fastify-plugin": "^4.5.1"
+  }
+}

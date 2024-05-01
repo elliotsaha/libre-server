@@ -1,9 +1,13 @@
 import fp from "fastify-plugin";
-
-export interface LibreAuthOptions {
-  prefix: string;
-}
+import { LibreAuthOptions } from "./types/plugin-options";
+import cookie from "@fastify/cookie";
+import { verifyRequestOrigin } from "lucia";
 
 export const libreAuth = fp(async (fastify, opts: LibreAuthOptions) => {
-  console.log(opts);
+  // register cookies
+  fastify.register(cookie, {
+    secret: opts.secret,
+    hook: "onRequest",
+    parseOptions: {},
+  });
 });

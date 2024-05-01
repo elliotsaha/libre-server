@@ -5,12 +5,15 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts",
-    "playground": "tsx src/playground/index.ts"
+    "playground": "tsx src/playground/index.ts",
+    "studio": "drizzle-kit studio --config='src/playground/drizzle.config.ts'"
   },
   "author": "Elliot Saha",
   "license": "ISC",
   "devDependencies": {
+    "@types/pg": "^8.11.5",
     "cz-conventional-changelog": "^3.3.0",
+    "drizzle-kit": "^0.20.17",
     "tsup": "^8.0.2",
     "tsx": "^4.8.1"
   },
@@ -20,11 +23,13 @@
     }
   },
   "dependencies": {
+    "@fastify/cookie": "^9.3.1",
     "@lucia-auth/adapter-drizzle": "^1.0.7",
     "drizzle-orm": "^0.30.9",
     "fastify": "^4.26.2",
     "fastify-plugin": "^4.5.1",
     "lucia": "^3.2.0",
+    "oslo": "^1.2.0",
     "pg": "^8.11.5"
   }
 }

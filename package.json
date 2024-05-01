@@ -4,7 +4,8 @@
   "description": "an authentication strategy for fastify",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsup src/index.ts"
+    "build": "tsup src/index.ts",
+    "playground": "tsx src/playground/index.ts"
   },
   "author": "Elliot Saha",
   "license": "ISC",
@@ -19,6 +20,11 @@
     }
   },
   "dependencies": {
-    "fastify-plugin": "^4.5.1"
+    "@lucia-auth/adapter-drizzle": "^1.0.7",
+    "drizzle-orm": "^0.30.9",
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
+    "lucia": "^3.2.0",
+    "pg": "^8.11.5"
   }
 }
